@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: dccfed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Gochi Hand", cursive;
+}
+
+.App {
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+h1 {
+  color: #00A97F;
+}
+
+.deck {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cd {
+  /* Variables */
+  width: 200px;
+  height: 300px;
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  background-color: lightblue;
+}
+
+
+
+.cd:hover  {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+  background-color: #5cdb95;
+}
+
+.cd:active  {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+.button:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.sentence {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slideIn 1s ease-in-out forwards, typing 1s steps(40) forwards;
+}
